@@ -10,7 +10,7 @@
  > setTimeout(() => document.querySelector('.alert').remove(),3000);
 
  # ScreenShot
- BookListApp_JS.png
+ ![](BookListApp_JS.png)
 
 
  a simple app to save a list of the books that i read. 
