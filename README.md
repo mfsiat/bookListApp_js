@@ -5,5 +5,6 @@
  4. will be working with JS events
  5. for the design or layout we used a bootsstrap theme from bootswatch
  6. all the methods in JS are static 
+ 7. we used event propagation to target a specific thing for delete 
 
  a simple app to save a list of the books that i read. 
