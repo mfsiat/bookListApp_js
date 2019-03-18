@@ -10,7 +10,7 @@
  > setTimeout(() => document.querySelector('.alert').remove(),3000);
 
  # ScreenShot
- ![](https://github.com/mfsiat/bookListApp_js/blob/master/BookListApp_JS.PNG.png)
+ ![](https://github.com/mfsiat/bookListApp_js/blob/master/BookListApp_JS.PNG)
 
 
  a simple app to save a list of the books that i read. 
