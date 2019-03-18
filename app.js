@@ -49,6 +49,18 @@ class UI{
         }
     }
 
+    static showAlert(message, className){
+        const div = document.createElement('div');
+        div.className = `alert alert-${className}`;
+        div.appendChild(document.createTextNode(message));
+        const container = document.querySelector('.container');
+        const form = document.querySelector('#book-form');
+        container.insertBefore(div, form);
+        // Vanish in 3 sec
+        setTimeout(() => document.querySelector('.alert').remove(),3000);
+
+    }
+
     static clearFields() {
         document.querySelector('#title').value = '';
         document.querySelector('#author').value = '';
@@ -74,19 +86,28 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
     const author = document.querySelector('#author').value;
     const isbn = document.querySelector('#isbn').value;
 
-    // Instantiate book 
-    const book = new Book(title, author, isbn);
+    // Validate 
+    if(title == '' || author == '' || isbn == '') {
+        UI.showAlert('Please fill in all the fields', 'danger');
+    } else {
+        // Instantiate book 
+        const book = new Book(title, author, isbn);
 
-    // console.log(book);
+        // Add book to UI 
+        UI.addBookToList(book);
 
-    // Add book to UI 
-    UI.addBookToList(book);
+        // Show success message
+        UI.showAlert('Book Added', 'success');
 
-    // Clear Fields
-    UI.clearFields();
+        // Clear Fields
+        UI.clearFields();
+    }
 });
 
-// Event: Remove a Book
+// Event: Remove a Book we used event propagation to target the actual list
 document.querySelector('#book-list').addEventListener('click', (e) =>{
     UI.deleteBook(e.target)
+
+    // Show success message
+    UI.showAlert('Book Added', 'success');
 });

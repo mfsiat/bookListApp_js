@@ -6,5 +6,8 @@
  5. for the design or layout we used a bootsstrap theme from bootswatch
  6. all the methods in JS are static 
  7. we used event propagation to target a specific thing for delete 
+ 8. to vanish the alert massege we used 
+ => setTimeout(() => document.querySelector('.alert').remove(),3000);
+ 
 
  a simple app to save a list of the books that i read. 
