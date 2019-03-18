@@ -1,0 +1,24 @@
+{
+  "name": "javascript_booklistapp",
+  "version": "1.0.0",
+  "description": "JS app ",
+  "main": "app.js",
+  "homepage": "https://mfsiat.github.io/bookListApp_js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d /"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mfsiat/bookListApp_js.git"
+  },
+  "author": "MD. Nasirul islam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mfsiat/bookListApp_js/issues"
+  },
+  "homepage": "https://github.com/mfsiat/bookListApp_js#readme",
+  "dependencies": {
+    "gh-pages": "^2.0.1"
+  }
+}
